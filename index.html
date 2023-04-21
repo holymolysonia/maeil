@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>매일유업 </title>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link href="css/main.css" rel="stylesheet" />
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+        integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <script>
+        $(function () {
+            var swiper = new Swiper(".main_visual", {
+                spaceBetween: 0,
+                centeredSlides: true,
+                autoplay: {
+                    delay: 3500,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+            });
+        })//jquery
+    </script>
+
+    <script>
+        window.onload = function () {
+
+            let loadingPage = document.getElementById('loading_page');
+
+            setTimeout(function () {
+                loadingPage.style.opacity = '0';
+                loadingPage.style.transition = '0.7s';
+                loadingPage.style.zIndex = '-99999';
+            }, 2000)//setTimeout end
+
+            let hd = document.getElementsByTagName('header')[0];
+            let menuOpen = hd.getElementsByClassName('menu_open')[0];
+            let menuClose = hd.getElementsByClassName('menu_close')[0];
+            let menu = hd.getElementsByTagName('nav')[0];
+            let body = document.getElementsByTagName('body')[0];
+
+            menuOpen.onclick = function () {
+                if (menu.style.display = 'none') {
+                    menu.style.display = 'block';
+                    body.classList.add('body_bg');
+                }
+            }//menuOpen.onclick end
+
+            menuClose.onclick = function () {
+                if (menu.style.display = 'block') {
+                    menu.style.display = 'none';
+                    body.classList.remove('body_bg');
+                }
+            }//menuClose.onclick end
+
+            let depth01 = hd.getElementsByClassName('depth01');
+            let depth02 = hd.getElementsByClassName('depth02');
+
+            for (let i = 0; i < depth02.length; i++) {
+                depth02[i].style.display = 'none';
+            }//for end
+
+            for (let i = 0; i < depth01.length; i++) {
+                console.log(depth01[i].children); //0
+
+                let depth02Children = depth01[i].children[0];
+
+                depth01[i].onclick = function () {
+                    if (depth02Children.style.display == 'none') {
+                        depth02Children.style.display = 'block';
+                        this.style.color = '#1765AC'
+                    } else {
+                        depth02Children.style.display = 'none';
+                        this.style.color = '#333'
+                    }
+                }//depth01.onclick end
+            }//for end
+        }//window.onload end
+    </script>
+</head>
+<div id="loading_page">
+    <img src="img/app_logo.png" alt="매일유업 로고" />
+</div><!-- .loading_page end -->
+
+<div id="wrap">
+
+    <body>
+        <header>
+            <div class="inner">
+                <h1>
+                    <a href="#">
+                        <img src="img/app_logo.png" alt="매일유업 로고" />
+                    </a>
+                </h1>
+                <div class="menu_open">
+                    <img src="img/icon_menu.png" alt="전체메뉴 열기" />
+                </div><!-- .menu_open end -->
+                <nav>
+                    <div class="menu_close">
+                        <img src="img/icon_close.png" alt="전체메뉴 닫기" />
+                    </div><!-- .menu_close end -->
+                    <ul class="menu">
+                        <li class="depth01">
+                            회사소개
+                            <ul class="depth02">
+                                <li><a href="#">기업소개</a></li>
+                                <li><a href="#">가치체계</a></li>
+                                <li><a href="#">인사말</a></li>
+                                <li><a href="#">연구소</a></li>
+                                <li><a href="#">공장</a></li>
+                                <li><a href="#">글로벌 사업</a></li>
+                                <li><a href="#">오시는 길</a></li>
+                            </ul><!-- .depth02 end -->
+                        </li><!-- .depth01 end -->
+                        <li class="depth01">
+                            브랜드
+                            <ul class="depth02">
+                                <li><a href="#">우유</a></li>
+                                <li><a href="#">발효유</a></li>
+                                <li><a href="#">치즈</a></li>
+                                <li><a href="#">주스</a></li>
+                                <li><a href="#">커피·Tea</a></li>
+                                <li><a href="#">곡물음료</a></li>
+                                <li><a href="#">유아식</a></li>
+                                <li><a href="#">건강식</a></li>
+                                <li><a href="#">간편식</a></li>
+                                <li><a href="#">아이간식</a></li>
+                                <li><a href="#">디저트</a></li>
+                                <li><a href="#">유지류</a></li>
+                                <li><a href="#">수입상품</a></li>
+                                <li><a href="#">수출상품</a></li>
+                                <li><a href="#">B2B</a></li>
+                                <li><a href="#">전체</a></li>
+                            </ul><!-- .depth02 end -->
+                        </li><!-- .depth01 end -->
+                        <li class="depth01">
+                            사회공헌
+                            <ul class="depth02">
+                                <li><a href="#">사회공헌 소개</a></li>
+                                <li><a href="#">나눔 활동</a></li>
+                                <li><a href="#">사회공헌 연혁</a></li>
+                                <li><a href="#">나눔소식</a></li>
+                            </ul><!-- .depth02 -->
+                        </li><!-- .depth01 end -->
+                        <li class="depth01">
+                            상생·윤리경영
+                            <ul class="depth02">
+                                <li><a href="#">상생경영</a></li>
+                                <li><a href="#">윤리경영</a></li>
+                                <li><a href="#">가족친화 경영</a></li>
+                                <li><a href="#">매일유업 동반성장</a></li>
+                            </ul><!-- .depth02 end -->
+                        </li><!-- .depth01 end -->
+                        <li class="depth01">
+                            IR
+                            <ul class="depth02">
+                                <li><a href="#">경영정보</a></li>
+                                <li><a href="#">재무정보</a></li>
+                                <li><a href="#">공시정보</a></li>
+                                <li><a href="#">IR 자료실</a></li>
+                                <li><a href="#">공고</a></li>
+                            </ul><!-- .depth02 end -->
+                        </li><!-- .depth01 end -->
+                        <li class="depth01">
+                            PR
+                            <ul class="depth02">
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">광고</a></li>
+                            </ul><!-- .depth02 end -->
+                        </li><!-- .depth01 end -->
+                    </ul><!-- .menu end -->
+                </nav>
+                <img class="mypage" src="img/icon_user.png" alt="마이페이지" />
+                <div class="bottom_menu">
+                    <ul>
+                        <li><img src="img/icon_location.png" /></li>
+                        <li><a href="#">대리점찾기</a></li>
+                    </ul>
+                    <ul>
+                        <li><img src="img/icon_home.png" /></li>
+                        <li><a href="#">홈</a></li>
+                    </ul>
+                    <ul>
+                        <li><img src="img/icon_QnA.png" /></li>
+                        <li><a href="#">고객센터</a></li>
+                    </ul>
+                    <ul>
+                        <li><img src="img/icon_more.png" /></li>
+                        <li><a href="#">더보기</a></li>
+                    </ul>
+                </div><!-- .bottom_menu end -->
+            </div><!-- .inner end -->
+        </header>
+
+        <main>
+            <!-- Swiper -->
+            <div class="swiper main_visual">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="img/main_visual_01.jpg" alt="More than food,
+                        Beyond Korea" />
+                        <div class="text">
+                            <h2>More than food,<br />
+                                Beyond Korea</h2>
+                            <p>새로운 식문화를 창조하며,<br />
+                                글로벌로 나아갑니다.</p>
+                        </div><!-- .text end -->
+                    </div><!-- .swiper-slide end -->
+                    <div class="swiper-slide">
+                        <img src="img/main_visual_02.jpg" alt="함께 나누는 매일" />
+                        <div class="text">
+                            <h2>함께<br />
+                                나누는 매일</h2>
+                            <p>단 한명의 아이도 건강한 삶에서 소외되지 않도록,<br />
+                                한국최초 8종 10개 제품의 특수분유를 만들었습니다.</p>
+                        </div><!-- .text end -->
+                    </div><!-- .swiper-slide end -->
+                    <div class="swiper-slide">
+                        <img src="img/main_visual_03.jpg" alt="글로벌매일" />
+                        <div class="text">
+                            <h2>글로벌<br />
+                                매일</h2>
+                            <p>1981년 첫 수출 이후 약20여개국에 우수한 품질의 유제품을 공급,<br />
+                                글로벌 식품회사로 인정받고 있습니다.</p>
+                        </div><!-- .text end -->
+                    </div><!-- .swiper-slide end -->
+                </div>
+                <!--                 
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div> -->
+                <div class="swiper-pagination"></div>
+            </div>
+
+            <section class="banner">
+                <div class="inner">
+                    <p class="year">Since 1969</p>
+                    <p>지난 50년간 건강한 식문화를<br />
+                        위해서 한길을 걸어왔습니다.</p>
+                </div><!-- .inner end -->
+            </section><!-- .banner end -->
+
+            <section class="maeil_new">
+                <div class="inner">
+                    <h3><span>매일</span> 소식</h3>
+                    <a href="#">
+                        <figure>
+                            <img src="img/maeil_new01.jpg" alt="소화가 잘 되는 우유 어르신 기부" />
+                        </figure>
+                    </a>
+                </div><!-- .inner end -->
+            </section><!-- .maeil_new end -->
+
+            <section class="maeil_movie">
+                <div class="inner">
+                    <h3><span>매일</span> Movie</h3>
+                    <a href="#">
+                        <figure>
+                            <img src="img/maeil_movie_01.jpg" alt="어메이징 오트" />
+                        </figure>
+                        <div class="text">
+                            <h4>어메이징 오트</h4>
+                            <p>어메~이징한 오트는 어떤 맛일까?<br />
+                                새롭게 즐기는 비건 오트 음료, 어메이징 오트!</p>
+                            <span>2023.04.11</span>
+                        </div><!-- .text end -->
+                    </a>
+                </div><!-- .inner end -->
+            </section><!-- .maeil_movie end -->
+
+            <section class="fresh_allday">
+                <div class="inner">
+                    <h3>신선함을 매일</h3>
+                    <a href="#">
+                        <figure>
+                            <img src="img/fresh_allday01.jpg" alt="바리스타룰스 돌체라떼" />
+                        </figure>
+                        <div class="text">
+                            <h4>바리스타룰스 돌체라떼</h4>
+                            <p>신선한 원유와 연유의 부드럽고 달콤한 풍미</p>
+                            <span>2023.04.06</span>
+                        </div><!-- .text end -->
+                    </a>
+                </div><!-- .inner end   -->
+            </section><!-- .fresh_allday end -->
+
+            <section class="hire_employee">
+                <div class="inner">
+                    <figure>
+                        <img src="img/hire01.jpg" alt="인재채용" />
+                    </figure>
+                    <div class="text">
+                        <h3>인재채용</h3>
+                        <p>호기심과 열정으로 <br />
+                            글로벌로 나아가는 당신이<br />
+                            매일의 인재입니다.</p>
+                    </div><!-- .text end -->
+                </div><!-- .inner end -->
+            </section><!-- .hire_employee end -->
+        </main>
+
+        <footer>
+            <div class="inner">
+                <div class="select_wrap">
+                    <select class="lang">
+                        <option selected>한국어/KR</option>
+                        <option>영어/ENG</option>
+                    </select><!-- .lang end -->
+                    <select class="family_site">
+                        <option selected>패밀리사이트</option>
+                        <option>매일홀딩스</option>
+                        <option>매일헬스뉴트리션</option>
+                        <option>제로투세븐</option>
+                        <option>상하농원</option>
+                        <option>엠즈씨드(폴바셋)</option>
+                        <option>크리스탈제이드</option>
+                        <option>엠즈씨드(더 키친일뽀르노)</option>
+                        <option>엠즈푸드시스템</option>
+                        <option>엠즈파트너스</option>
+                        <option>레뱅드매일</option>
+                        <option>엠디웰</option>
+                        <option>엠즈베이커스</option>
+                    </select><!-- .family_site -->
+                </div><!-- select_wrap -->
+                <ul class="sns">
+                    <li>
+                        <a href="#">
+                            <img src="img/icon_facebook.png" alt="페이스북" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/icon_instagram.png" alt="인스타그램" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/icon_youtube.png" alt="유튜브" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/icon_twitter.png" alt="트위터" />
+                        </a>
+                    </li>
+                </ul><!-- .sns end -->
+                <ul class="naver_callnum">
+                    <li>
+                        <a href="#">
+                            <img src="img/icon_naverpost.png" alt="네이버포스트" />
+                        </a>
+                    </li>
+                    <li class="num">
+                        <a href="tel:1588-1539">1588-1539</a>
+                    </li>
+                </ul><!-- .naver_callnum -->
+
+                <ul class="info">
+                    <li><a href="#">개인정보처리방침</a></li>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">전자입찰(협력사용)</a></li>
+                </ul>
+
+                <p class="hire"><a href="#">인재채용</a></p>
+                <p class="address">서울시 종로구 종로 1길 50 더 케이 트윈타워 A동</p>
+            </div><!-- .inner end -->
+            <p class="copyright">Copyright(c) 2016
+                by Maeil Dairies Co.Ltd All rights reserved.</p>
+        </footer>
+    </body>
+</div><!-- #wrap end -->
+
+</html>

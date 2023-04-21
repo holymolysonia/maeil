@@ -1,0 +1,355 @@
+@charset "utf-8";
+@import url('common.css');
+
+/* 📢📢.main_visual📢📢 */
+.main_visual {
+    width: 100%;
+    height: 70vh;
+    max-width: 460px;
+    margin-top: 70px;
+}
+
+.main_visual .swiper-slide {
+    width: 100%;
+    height: 100%;
+}
+
+.main_visual .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.main_visual .swiper-slide .text {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: #fff;
+    text-align: center;
+}
+
+.main_visual .swiper-slide .text h2 {
+    font-size: 30px;
+    position: relative;
+    margin-bottom: 50px;
+    line-height: 1.3;
+    font-weight: 700;
+}
+
+.main_visual .swiper-slide .text h2::after {
+    content: '';
+    width: 60px;
+    height: 1px;
+    background-color: #fff;
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.main_visual .swiper-slide .text p {
+    line-height: 1.3;
+    white-space: nowrap;
+}
+
+.main_visual .swiper-pagination-bullet {
+    background-color: #fff;
+    width: 15px;
+    height: 15px;
+}
+
+.main_visual .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+.main_visual .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 8px
+}
+
+/* 📢📢.banner📢📢 */
+.banner {
+    width: 100%;
+}
+
+.banner .inner {
+    text-align: center;
+    font-weight: 700;
+}
+
+.banner .inner .year {
+    background-color: #1765AC;
+    color: #Fff;
+    font-size: 20px;
+    padding: 10px 0;
+}
+
+.banner .inner p:last-of-type {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    line-height: 1.3;
+}
+
+/* 📢📢.maeil_new📢📢 */
+.maeil_new {
+    width: 100%;
+}
+
+.maeil_new .inner {
+    width: calc(100% - 20px);
+    margin: 60px auto;
+}
+
+.maeil_new .inner h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.maeil_new .inner h3 span {
+    color: #1765AC;
+}
+
+.maeil_new .inner figure {
+    width: 100%;
+    height: 400px;
+}
+
+.maeil_new .inner figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+/* 📢📢.maeil_movie📢📢 */
+.maeil_movie {
+    width: 100%;
+}
+
+.maeil_movie .inner {
+    width: calc(100% - 20px);
+    margin: 0 auto;
+}
+
+.maeil_movie .inner h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.maeil_movie .inner h3 span {
+    color: #1765AC;
+}
+
+.maeil_movie .inner figure {
+    width: 100%;
+    height: 200px;
+}
+
+.maeil_movie .inner figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.maeil_movie .inner .text {
+    margin-top: 15px;
+}
+
+.maeil_movie .inner .text h4 {
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.maeil_movie .inner .text p {
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+.maeil_movie .inner .text span {
+    font-size: 13px;
+    color: #838383;
+}
+
+/* 📢📢.fresh_allday📢📢 */
+.fresh_allday {
+    width: 100%;
+}
+
+.fresh_allday .inner {
+    width: calc(100% - 20px);
+    margin: 60px auto;
+}
+
+.fresh_allday .inner h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.fresh_allday .inner figure {
+    width: 100%;
+    height: 160px;
+}
+
+.fresh_allday .inner figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.fresh_allday .inner .text {
+    margin-top: 15px;
+}
+
+.fresh_allday .inner .text h4 {
+    margin-bottom: 10px;
+}
+
+.fresh_allday .inner .text p {
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+.fresh_allday .inner .text span {
+    font-size: 13px;
+    color: #838383;
+}
+
+/* 📢📢.hire_employee📢📢 */
+.hire_employee {
+    width: 100%;
+    margin: 60px auto;
+}
+
+.hire_employee .inner {
+    position: relative;
+}
+
+.hire_employee .inner figure {
+    width: 100%;
+    height: 300px;
+}
+
+.hire_employee .inner figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hire_employee .inner .text {
+    color: #fff;
+    position: absolute;
+    top: 20px;
+    left: 10px;
+}
+
+.hire_employee .inner .text h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.hire_employee .inner .text p {
+    font-size: 14px;
+    line-height: 1.3;
+}
+
+/* 📢📢footer📢📢 */
+footer {
+    width: 100%;
+    background-color: #1765AC;
+    padding-top: 30px;
+    color: #fff;
+}
+
+footer .inner {
+    width: calc(100% - 20px);
+    margin: 0 auto;
+}
+
+footer .inner .select_wrap {
+    width: 100%;
+}
+
+footer .inner .select_wrap select {
+    font-family: 'Pretendard';
+    width: calc(100% / 2 - 5px);
+    height: 40px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 14px;
+    background-color: #1765AC;
+    border: 1px solid #fff;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+footer .inner .select_wrap select option {
+    line-height: 1.5;
+    background-color: #fff;
+    color: #1765AC;
+}
+
+footer .inner .sns {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+
+footer .inner .sns li img {
+    height: 30px;
+}
+
+footer .inner .naver_callnum {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+footer .inner .naver_callnum li img {
+    width: 20px;
+}
+
+footer .inner .naver_callnum .num {
+    font-size: 20px;
+    position: relative;
+    display: flex;
+}
+
+footer .inner .naver_callnum .num::before {
+    content: '';
+    background: url('../img/icon_phone.png') center center / cover no-repeat;
+    width: 20px;
+    height: 20px;
+    display: block;
+    margin-right: 5px;
+}
+
+footer .inner .info {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+    font-weight: 700;
+}
+
+footer .inner .hire {
+    display: inline-block;
+    padding: 5px 20px;
+    background-color: #114E85;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 700
+}
+
+footer .inner .address {
+    font-size: 13px;
+    margin: 30px 0;
+    text-align: center;
+}
+
+footer .copyright {
+    background-color: #114E85;
+    width: 100%;
+    padding: 30px 0;
+    text-align: center;
+    font-size: 13px;
+}
